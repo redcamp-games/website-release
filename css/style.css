@@ -245,3 +245,98 @@ textarea {
   }
 }
 
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('fonts/TitilliumWeb-Bold.woff2') format('woff2'),
+  url('fonts/TitilliumWeb-Bold.woff') format('woff'),
+  url('fonts/TitilliumWeb-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('fonts/TitilliumWeb-Regular.woff2') format('woff2'),
+  url('fonts/TitilliumWeb-Regular.woff') format('woff'),
+  url('fonts/TitilliumWeb-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #efe5e5 url('../img/clouds.png') no-repeat;
+  background-size: cover;
+}
+div.logo {
+  width: 181px;
+  height: 123px;
+  margin: 77px auto auto;
+  background: url(../img/logo.png) no-repeat top center;
+}
+.header-title {
+  max-width: 800px;
+  height: 123px;
+  margin: 30px auto auto;
+  text-align: center;
+  font-family: "Titillium Web", serif;
+}
+.header-title > p:first-child {
+  margin: 0;
+  color: #a53a3a;
+  font-size: 36px;
+}
+.header-title > p:nth-child(2) {
+  margin: -15px 0;
+  color: #65211f;
+  font-size: 48px;
+}
+.header-title > p.desc {
+  color: #a53a3a;
+  font-size: 28px;
+}
+.header-title > p:last-child {
+  margin-top: -20px;
+}
+.header-title > p.desc > b {
+  color: #65211f;
+}
+
+.redcamp-land {
+  width: 100%;
+  height: calc(100% - 353px);
+  position: absolute;
+  z-index: -1;
+  background: url(../img/redcamp-land.png) no-repeat top center;
+}
+
+.redcamp-land.shift {
+  margin-top: 300px;
+  height: calc(100% - 653px);
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+  .header-title {
+    max-width: 330px;
+  }
+  .header-title > p:first-child {
+    font-size: 24px;
+  }
+  .header-title > p:nth-child(2) {
+    font-size: 36px;
+  }
+  .header-title > p.desc {
+    font-size: 20px;
+  }
+  .redcamp-land {
+    height: calc(100% - 200px);
+  }
+  .redcamp-land.shift {
+    margin-top: 100px;
+    height: calc(100% - 300px);
+  }
+}
+
