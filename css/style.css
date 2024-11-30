@@ -270,6 +270,8 @@ body {
   padding: 0;
   background: #efe5e5 url('../img/clouds.png') no-repeat;
   background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 div.logo {
   width: 181px;
@@ -307,15 +309,54 @@ div.logo {
 
 .redcamp-land {
   width: 100%;
-  height: calc(100% - 353px);
+  height: calc(100% - 637px);
   position: absolute;
   z-index: -1;
   background: url(../img/redcamp-land.png) no-repeat top center;
 }
 
-.redcamp-land.shift {
-  margin-top: 300px;
-  height: calc(100% - 653px);
+.button-layout {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.button-layout > .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+.button {
+  cursor: pointer;
+  width: 300px;
+  height: 100px;
+  color: #65211f;
+  font-size: 32px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  background-color: #de9b9b;
+  border: none;
+  box-shadow: 2px 2px 0 #65211f;
+}
+.button > span {
+  vertical-align: middle;
+}
+.button > svg {
+  margin-right: 5px;
+  margin-left: -10px;
+}
+.button.small {
+  width: auto;
+  min-width: 150px;
+  height: 44px;
+  color: #65211f;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.button.telegram {
+  /*background-color: #54a9eb;*/
 }
 
 @media (min-width: 360px) and (orientation: portrait) {
@@ -335,8 +376,8 @@ div.logo {
     height: calc(100% - 200px);
   }
   .redcamp-land.shift {
-    margin-top: 100px;
-    height: calc(100% - 300px);
+    margin-top: 0;
+    height: calc(100% - 200px);
   }
 }
 
